@@ -1,10 +1,10 @@
 import { useAtom } from "jotai";
-import { text1Atom, text2Atom } from "../store";
+import { requirements1Atom, requirements2Atom } from "../store";
 import { compare, listPackages } from "../utils";
 
 export default function Body() {
-  const [text1, setText1] = useAtom(text1Atom);
-  const [text2, setText2] = useAtom(text2Atom);
+  const [text1, setText1] = useAtom(requirements1Atom);
+  const [text2, setText2] = useAtom(requirements2Atom);
   return (
     <>
       <button>Compare!</button>

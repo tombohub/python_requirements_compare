@@ -1,4 +1,4 @@
 import { atomWithStorage } from "jotai/utils";
 
-export const text1Atom = atomWithStorage("text1", "");
-export const text2Atom = atomWithStorage("text2", "");
+export const requirements1Atom = atomWithStorage("requirements1", "");
+export const requirements2Atom = atomWithStorage("requirements2", "");

@@ -1,15 +1,15 @@
 import { PythonPackage } from "./domain";
 import _ from "lodash";
-export function compare(text1: string, text2: string) {
-  const packageList1 = text1.trim().split("\n");
-  const packageList2 = text2.trim().split("\n");
-  const extraText1 = _.difference(packageList1, packageList2);
+export function compare(requirements1: string, requirements2: string) {
+  const packageList1 = listPackages(requirements1);
+  const packageList2 = listPackages(requirements2);
+  const extraText1 = _.differenceWith(packageList1, packageList2, _.isEqual);
   const extraText2 = _.difference(packageList2, packageList1);
-  return extraText2;
+  return extraText1;
 }
 
 export function listPackages(text: string) {
-  const list = text.split("\n");
+  const list = text.trim().split("\n");
   return list.map(x => extractPackageInfo(x));
 }
 

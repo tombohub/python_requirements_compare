@@ -13,10 +13,10 @@ export class PythonPackage {
 /**
  * Single line in requirements.txt file
  */
-export class TextLine {
-  textLine: string;
+export class RequirementsLine {
+  line: string;
 
-  constructor(textLine: string) {
-    this.textLine = textLine;
+  constructor(line: string) {
+    this.line = line;
   }
 }
